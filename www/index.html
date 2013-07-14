@@ -3,23 +3,27 @@
         <link rel="stylesheet" href="jqueryMobile10a1min.css" />  
         <script src="jquery143min.js"></script>  
         <script src="jqueryMobile10a1min.js"></script>  
-        <script type="text/javascript" src="phoneGap.js"></script>
+        <script type="text/javascript" src="phonegap.js"></script>
         <script>
 
             function onLoad()
             {
+	        alert('onload')
+		console.log('onload')
                 document.addEventListener('deviceready', onDeviceReady, false);
             }
 
             function onDeviceReady()
             {
                 // do nothing
+	        alert('ready')
+		console.log('ready')
                 console.log('Device is now ready');
             }
 
             var checkBugs = function()
             {
-                navigator.notification.alert('Ya! No more bugs', null, 'Notification');
+                alert('Ya! No more bugs', null, 'Notification');
             }
 
             $(document).ready(function()
@@ -46,10 +50,9 @@
                 <h1>Hello Debugging World</h1>
             </div>
             <div data-role="content">
-                <input type="button" id="buh_button" value="Check For Bugs">
+                <input type="button" id="bug_button" value="Check For Bugs">
             </div>
         </div>
         </div>
-    <script type="text/javascript" src="http://debug.phonegap.com/target/target-script-min.js#63dffb18-8ca8-11e0-9135-4040eebe8fea"></script></body>
-
+    </body>
 </html>
